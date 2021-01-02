@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+
+IsPresent=1
+RandomCheck=$(( RANDOM%2 ))
+echo $RandomCheck
+
+if [ $IsPresent -eq $RandomCheck ]
+then
+	echo "Employee is Present";
+else 
+	echo "Employee is abscent";
+fi
