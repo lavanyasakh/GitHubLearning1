@@ -1,29 +1,27 @@
 #!/bin/bash -x
 
-read -p "Enter first no x:" x
-read -p "Enter second no y:" y
-read -p "Enter third no z:" z
-if [ $x -gt $y ] && [ $x -gt $z ]
+Ran1=$(( RANDOM%100 ))
+Ran2=$(( RANDOM%100 ))
+Ran3=$(( RANDOM%100 ))
+if [ $Ran1 -gt $Ran2 ] && [ $Ran1 -gt $Ran3 ]
 then 
-	echo "The max no is $x";
-elif [ $y -gt $x ] && [ $y -gt $z ]
+	echo "The max no is $Ran1";
+elif [ $Ran2 -gt $Ran1 ] && [ $Ran2 -gt $Ran3 ]
 then
-	echo "The max no is $y";
-elif [ $z -gt $x ] && [ $z -gt $y ]
+	echo "The max no is $Ran2";
+elif [ $Ran3 -gt $Ran1 ] && [ $Ran3 -gt $Ran2 ]
 then
-	echo "The max no is $z";
-else 
-	echo "The no's are equal";
+	echo "The max no is $Ran3";
 fi
-if [ $x -lt $y ] && [ $x -lt $z ]
+
+if [ $Ran1 -lt $Ran2 ] && [ $Ran1 -lt $Ran3 ]
 then
-   echo "The min no is $x";
-elif [ $y -lt $x ] && [ $y -lt $z ]
+   echo "The min no is $Ran1";
+elif [ $Ran2 -lt $Ran1 ] && [ $Ran2 -lt $Ran3 ]
 then
-   echo "The min no is $y";
-elif [ $z -lt $x ] && [ $z -lt $y ]
+   echo "The min no is $Ran2";
+elif [ $Ran3 -lt $Ran1 ] && [ $Ran3 -lt $Ran2 ]
 then
-   echo "The min no is $z";
-else
-   echo "The no's are equal";
+   echo "The min no is $Ran3";
+
 fi
