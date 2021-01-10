@@ -4,15 +4,12 @@ i=2
 mul=1
 while [ $n != 1 ]
 do
-	if [ $((n%i)) == 0 ]
-	then
 		while [ $((n%i)) == 0 ]
 		do
-			echo $i
+			echo "$i is a prime factor of  $n"
 			mul=$(($mul*$i))
 			n=$((n/i))
 		done
-	fi
 	((i++))
 done	
 echo $mul		
