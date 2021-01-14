@@ -1,9 +1,9 @@
 #!/bin/bash -x 
 
-echo  "Enter a number: $1";
+read -p  "Enter your power:  "  n
 
-for (( counter=0; counter<=$1; counter++ ))
+for (( i=1; i<=$n; i++ ))
 do
-	var=$((2**$counter))
-printf "$counter = $var\n"
+	var=$(( 2**$i ))
+printf "The table of two is equal to $var"
 done
