@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-Ran1=$(( RANDOM%100 ))
-Ran2=$(( RANDOM%100 ))
-Ran3=$(( RANDOM%100 ))
+Ran1=$(( 100 +  RANDOM%999 ))
+Ran2=$(( 100 +  RANDOM%999 ))
+Ran3=$(( 100 +  RANDOM%999 ))
 if [ $Ran1 -gt $Ran2 ] && [ $Ran1 -gt $Ran3 ]
 then 
 	echo "The max no is $Ran1";
